@@ -7,3 +7,5 @@ dist-ssr
 .env.*.locae
 firebase-debug.log
 nul
+.vercel
+.env*

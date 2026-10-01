@@ -13,6 +13,7 @@ import {
   Zap,
 } from "lucide-react";
 import "./styles.css";
+import DeleteAccount from "./DeleteAccount";
 
 const products = [
   "Pulsa & Data",
@@ -330,8 +331,14 @@ function App() {
   );
 }
 
+const Root = () => {
+  const path = window.location.pathname;
+  if (path === '/delete-account') return <DeleteAccount />;
+  return <App />;
+};
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <Root />
   </StrictMode>,
 );
